@@ -71,6 +71,7 @@ function initLang() {
   document.body.classList.toggle('ltr', currentLang === 'en');
   document.getElementById('lang-toggle').textContent = currentLang === 'ar' ? 'EN' : 'عر';
   buildDynamicLists(translations);
+  buildServiceOptions();
 }
 
 function applyTranslations(t) {
@@ -254,45 +255,91 @@ function initCountdown() {
 }
 
 // ========================
-// CONTACT FORM
+// SERVICE OPTIONS
 // ========================
-function initForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
+const SERVICE_OPTIONS_AR = [
+  'نظام طلبات اونلاين للمطاعم',
+  'نظام حجز طاولات',
+  'منيو رقمي',
+  'تطبيق للمطاعم',
+  'كل الخدمات'
+];
+const SERVICE_OPTIONS_EN = [
+  'Online ordering system',
+  'Table reservation system',
+  'Restaurant dashboard',
+  'Delivery system',
+  'Reports & sales',
+  'WhatsApp integration',
+  'Digital menu',
+  'All services'
+];
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    const name = document.getElementById('f-name').value.trim();
-    const phone = document.getElementById('f-phone').value.trim();
-    const msg = document.getElementById('f-msg').value.trim();
+let selectedServices = [];
 
-    if (!name || !phone || !msg) return;
+function buildServiceOptions() {
+  const container = document.getElementById('service-opts');
+  if (!container) return;
+  const opts = currentLang === 'ar' ? SERVICE_OPTIONS_AR : SERVICE_OPTIONS_EN;
+  selectedServices = [];
+  container.innerHTML = opts.map((opt, i) =>
+    `<button type="button" class="sopt" onclick="toggleService(this,'${opt}')">${opt}</button>`
+  ).join('');
+}
 
-    btn.textContent = '...';
-    btn.style.opacity = '0.7';
-    btn.disabled = true;
-
-    try {
-      await fetch('https://formsubmit.co/rAhmed12007@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ name, phone, message: msg, _subject: 'JAHEZLY Lead — ' + name })
-      });
-    } catch (err) {}
-
-    // Show success regardless
-    const successEl = document.getElementById('form-success');
+function toggleService(btn, val) {
+  btn.classList.toggle('active');
+  const idx = selectedServices.indexOf(val);
+  if (idx > -1) selectedServices.splice(idx, 1);
+  else selectedServices.push(val);
+  // Auto-fill message textarea
+  const msgEl = document.getElementById('f-msg');
+  if (msgEl && selectedServices.length > 0) {
     const t = currentLang === 'ar' ? ar : en;
-    if (successEl) {
-      successEl.textContent = t.form_success_msg;
-      successEl.classList.add('show');
-    }
-    form.reset();
-    btn.textContent = t.form_submit;
-    btn.style.opacity = '1';
-    btn.disabled = false;
-  });
+    msgEl.value = (currentLang === 'ar' ? 'احتاج: ' : 'I need: ') + selectedServices.join(', ');
+  } else if (msgEl && selectedServices.length === 0) {
+    msgEl.value = '';
+  }
+}
+
+// ========================
+// CONTACT FORM → WHATSAPP
+// ========================
+function sendToWhatsApp(e) {
+  e.preventDefault();
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const msg = document.getElementById('f-msg').value.trim();
+
+  if (!name || !phone) return;
+
+  const t = currentLang === 'ar' ? ar : en;
+  const services = selectedServices.length > 0
+    ? (currentLang === 'ar' ? '\nالخدمات المطلوبة: ' : '\nRequired services: ') + selectedServices.join(', ')
+    : '';
+  const extra = msg && !msg.includes(selectedServices[0] || 'X')
+    ? (currentLang === 'ar' ? '\nملاحظات: ' : '\nNotes: ') + msg
+    : '';
+
+  const waMsg = currentLang === 'ar'
+    ? `السلام عليكم، أنا مهتم بـ JAHEZLY\nالاسم: ${name}\nرقم التواصل: ${phone}${services}${extra}`
+    : `Hello, I'm interested in JAHEZLY\nName: ${name}\nPhone: ${phone}${services}${extra}`;
+
+  window.open('https://wa.me/201026108708?text=' + encodeURIComponent(waMsg), '_blank');
+
+  // Show success
+  const btn = document.getElementById('form-submit-btn');
+  if (btn) {
+    btn.style.background = '#25D366';
+    btn.querySelector('span').textContent = t.form_success_msg || '✅ تم الإرسال!';
+    setTimeout(() => {
+      btn.style.background = '';
+      btn.querySelector('span').textContent = t.form_submit;
+    }, 4000);
+  }
+  document.getElementById('contact-form').reset();
+  selectedServices = [];
+  document.querySelectorAll('.sopt').forEach(b => b.classList.remove('active'));
 }
 
 // ========================
@@ -342,6 +389,7 @@ function highlightHeroTitle() {
 document.addEventListener('DOMContentLoaded', () => {
   initLogos();
   initLang();
+  buildServiceOptions();
   highlightHeroTitle();
   initParticles();
   initNavbar();
@@ -349,7 +397,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursor();
   initReveal();
   initCountdown();
-  initForm();
   initSmoothScroll();
   initParallax();
 

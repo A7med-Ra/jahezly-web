@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" id="html-root">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">جاهزلي — نظام إدارة المطاعم الذكي</title>
-    <link rel="icon" type="image/png" href="img/tab-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="description" content="جاهزلي - أقوى نظام إدارة مطاعم أونلاين في مصر، اطلب طعامك واحجز طاولتك بسهولة.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="ima" href="img/tab-logo.png">
+
+<title>جاهزلي — نظام إدارة المطاعم الذكي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="جاهزلي - أقوى نظام إدارة مطاعم أونلاين في مصر، اطلب طعامك واحجز طاولتك بسهولة.">
 
 <meta name="keywords" content="جاهزلي, مطاعم, إدارة مطاعم, حجز طاولات, اطلب أونلاين, Jahezly">
 
 <meta property="og:title" content="جاهزلي - نظام إدارة المطاعم الذكي">
 <meta property="og:description" content="حوّل مطعمك للنظام الرقمي وابدأ باستقبال الطلبات أونلاين.">
-<meta property="og:image" content="img/Final-logo-of-jahezly.png"> <meta property="og:url" content="https://a7med-ra.github.io/jahezly-web/">
+<meta property="og:image" content="img/Final-logo-of-jahezly.png"> <meta property="og:url" content="https://ahmedra44444.github.io/jahezly-web/">
 
 <meta name="robots" content="index, follow">
 <meta name="language" content="Arabic">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -34,11 +35,9 @@
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">
-      <div class="footer-logo">
+<div class="footer-logo">
    <img src="img/Final-logo-of-jahezly.png" alt="Logo" style="height: 50px;">
 </div>
-    </div>
     <div class="nav-links" id="nav-links">
       <a href="#pain" data-key="nav_pain" class="nav-link"></a>
       <a href="#solution" data-key="nav_solution" class="nav-link"></a>
@@ -290,7 +289,7 @@
       <div class="contact-info reveal">
         <div class="cinfo-item">
           <div class="cinfo-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.81 19.79 19.79 0 01.86 2.18 2 2 0 012.83 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div><div class="cinfo-lbl" data-key="cinfo1_lbl"></div><div class="cinfo-val">+20 102 610 8708</div></div>
+          <div><div class="cinfo-lbl" data-key="cinfo1_lbl"></div><div class="cinfo-val">+20 102 610 870</div></div>
         </div>
         <div class="cinfo-item">
           <div class="cinfo-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -302,7 +301,7 @@
         </div>
         <div class="contact-guarantee" data-key="contact_guarantee"></div>
       </div>
-      <form class="contact-form reveal" id="contact-form">
+      <form class="contact-form reveal" id="contact-form" onsubmit="sendToWhatsApp(event)">
         <div class="form-group">
           <label data-key="form_name"></label>
           <input type="text" id="f-name" data-key-placeholder="form_name_ph" required>
@@ -311,12 +310,20 @@
           <label data-key="form_phone"></label>
           <input type="tel" id="f-phone" data-key-placeholder="form_phone_ph" required>
         </div>
+        <!-- SERVICE OPTIONS -->
+        <div class="form-group">
+          <label data-key="form_services_lbl"></label>
+          <div class="service-opts" id="service-opts"></div>
+        </div>
         <div class="form-group">
           <label data-key="form_msg"></label>
-          <textarea id="f-msg" rows="4" data-key-placeholder="form_msg_ph" required></textarea>
+          <textarea id="f-msg" rows="3" data-key-placeholder="form_msg_ph"></textarea>
         </div>
-        <button type="submit" class="btn-primary form-submit" data-key="form_submit"></button>
-        <div class="form-success" id="form-success" data-key="form_success_msg"></div>
+        <button type="submit" class="btn-primary form-submit" id="form-submit-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.528 5.855L.057 23.882l6.186-1.443A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.17-1.395l-.37-.22-3.672.857.898-3.58-.242-.375A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          <span data-key="form_submit"></span>
+        </button>
+        <div class="form-note" data-key="form_wa_note"></div>
       </form>
     </div>
   </div>

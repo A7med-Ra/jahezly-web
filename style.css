@@ -169,7 +169,7 @@ body.ltr {
 
 .hero-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800; line-height: 1.39;
+  font-weight: 800; line-height: 1.2;
   margin-bottom: 1.25rem;
   background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
@@ -483,7 +483,19 @@ body.ltr {
   background: rgba(255,106,0,0.05);
   box-shadow: 0 0 0 3px rgba(255,106,0,0.1);
 }
-.form-submit { width: 100%; border: none; font-size: 1rem; padding: 1rem; }
+.form-note { font-size: 0.75rem; color: rgba(255,255,255,0.3); text-align: center; margin-top: 0.75rem; }
+.service-opts { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.sopt {
+  padding: 0.45rem 1rem; border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+  font-size: 0.8rem; color: rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.2s;
+  font-family: var(--font-ar);
+}
+.sopt:hover { border-color: var(--orange); color: var(--orange); background: rgba(255,106,0,0.08); }
+.sopt.active { background: var(--orange); color: var(--white); border-color: var(--orange); }
+.form-submit { width: 100%; border: none; font-size: 1rem; padding: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
 .form-success {
   display: none; text-align: center; margin-top: 1rem;
   font-size: 0.9rem; color: #22c55e; font-weight: 600;

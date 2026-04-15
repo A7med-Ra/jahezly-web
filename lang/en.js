@@ -108,7 +108,9 @@ const en = {
   form_msg: "Tell me about your restaurant",
   form_msg_ph: "Restaurant type, daily orders, current problems...",
   form_submit: "Send — I'll reply immediately",
-  form_success_msg: "✅ Sent! I'll reply within an hour at most",
+  form_services_lbl: "What do you need for your restaurant?",
+  form_wa_note: "Opens WhatsApp directly — I'll reply within an hour",
+  form_success_msg: "✅ Sent! I'll reply within an hour",
   footer_text: "JAHEZLY — Complete Restaurant Management System for Egypt & Saudi Arabia",
   footer_copy: "© 2025 JAHEZLY. All rights reserved"
 };
