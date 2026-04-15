@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">جاهزلي — نظام إدارة المطاعم الذكي</title>
+    <link rel="icon" type="image/png" href="img/tab-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursor-follower"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/201026108708" target="_blank" class="wa-float" id="wa-float">
+  <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.528 5.855L.057 23.882l6.186-1.443A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.17-1.395l-.37-.22-3.672.857.898-3.58-.242-.375A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="footer-logo">
+   <img src="img/Final-logo-of-jahezly.png" alt="Logo" style="height: 50px;">
+</div>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#pain" data-key="nav_pain" class="nav-link"></a>
+      <a href="#solution" data-key="nav_solution" class="nav-link"></a>
+      <a href="#proof" data-key="nav_proof" class="nav-link"></a>
+      <a href="#pricing" data-key="nav_pricing" class="nav-link"></a>
+      <a href="#contact" data-key="nav_contact" class="nav-link"></a>
+    </div>
+    <div class="nav-actions">
+      <button class="lang-toggle" id="lang-toggle">EN</button>
+      <a href="#contact" class="nav-cta" data-key="nav_cta"></a>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-inner">
+    <div class="hero-badge reveal">
+      <span class="badge-dot"></span>
+      <span data-key="hero_badge"></span>
+    </div>
+
+    <p class="hero-sub reveal" data-key="hero_sub"></p>
+    <div class="hero-cta-wrap reveal">
+      <a href="#contact" class="btn-primary" data-key="hero_cta"></a>
+      <div class="hero-trust">
+        <div class="trust-avatars">
+          <div class="avatar" style="background:#FF6A00">أ</div>
+          <div class="avatar" style="background:#e55a00">م</div>
+          <div class="avatar" style="background:#cc4f00">س</div>
+          <div class="avatar" style="background:#b34400">ع</div>
+        </div>
+        <span data-key="hero_trust"></span>
+      </div>
+    </div>
+    <div class="hero-urgency reveal" data-key="hero_urgency"></div>
+    <div class="hero-stats reveal">
+      <div class="hstat"><div class="hstat-num">+50</div><div class="hstat-lbl" data-key="stat1"></div></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><div class="hstat-num">98%</div><div class="hstat-lbl" data-key="stat2"></div></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><div class="hstat-num">24/7</div><div class="hstat-lbl" data-key="stat3"></div></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- PAIN SECTION -->
+<section class="pain-sec" id="pain">
+  <div class="container">
+    <div class="section-label reveal" data-key="pain_label"></div>
+    <h2 class="section-title reveal" data-key="pain_title"></h2>
+    <p class="section-sub reveal" data-key="pain_sub"></p>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon">📦</div>
+        <h3 data-key="pain1_title"></h3>
+        <p data-key="pain1_body"></p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">😤</div>
+        <h3 data-key="pain2_title"></h3>
+        <p data-key="pain2_body"></p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">📱</div>
+        <h3 data-key="pain3_title"></h3>
+        <p data-key="pain3_body"></p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">💸</div>
+        <h3 data-key="pain4_title"></h3>
+        <p data-key="pain4_body"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="before-after" id="before-after">
+  <div class="container">
+    <div class="section-label reveal" data-key="ba_label"></div>
+    <h2 class="section-title reveal" data-key="ba_title"></h2>
+    <div class="ba-grid">
+      <div class="ba-card before-card reveal">
+        <div class="ba-header">
+          <span class="ba-icon">❌</span>
+          <span data-key="before_label"></span>
+        </div>
+        <ul class="ba-list" id="before-list"></ul>
+      </div>
+      <div class="ba-arrow">→</div>
+      <div class="ba-card after-card reveal">
+        <div class="ba-header">
+          <span class="ba-icon">✅</span>
+          <span data-key="after_label"></span>
+        </div>
+        <ul class="ba-list" id="after-list"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution-sec" id="solution">
+  <div class="container">
+    <div class="section-label reveal" data-key="sol_label"></div>
+    <h2 class="section-title reveal" data-key="sol_title"></h2>
+    <p class="section-sub reveal" data-key="sol_sub"></p>
+    <div class="features-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+        <h3 data-key="feat1_title"></h3>
+        <p data-key="feat1_body"></p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3 data-key="feat2_title"></h3>
+        <p data-key="feat2_body"></p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3 data-key="feat3_title"></h3>
+        <p data-key="feat3_body"></p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3 data-key="feat4_title"></h3>
+        <p data-key="feat4_body"></p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 data-key="feat5_title"></h3>
+        <p data-key="feat5_body"></p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon-wrap"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3 data-key="feat6_title"></h3>
+        <p data-key="feat6_body"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof-sec" id="proof">
+  <div class="container">
+    <div class="section-label reveal" data-key="proof_label"></div>
+    <h2 class="section-title reveal" data-key="proof_title"></h2>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text" data-key="t1_text"></p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#FF6A00">أ</div>
+          <div>
+            <div class="testi-name" data-key="t1_name"></div>
+            <div class="testi-role" data-key="t1_role"></div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text" data-key="t2_text"></p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#cc4f00">م</div>
+          <div>
+            <div class="testi-name" data-key="t2_name"></div>
+            <div class="testi-role" data-key="t2_role"></div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text" data-key="t3_text"></p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#e55a00">س</div>
+          <div>
+            <div class="testi-name" data-key="t3_name"></div>
+            <div class="testi-role" data-key="t3_role"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-sec" id="pricing">
+  <div class="container">
+    <div class="section-label reveal" data-key="price_label"></div>
+    <h2 class="section-title reveal" data-key="price_title"></h2>
+    <p class="section-sub reveal" data-key="price_sub"></p>
+    <div class="price-card reveal">
+      <div class="price-mystery">
+        <div class="price-q">?</div>
+        <div class="price-hint" data-key="price_hint"></div>
+      </div>
+      <div class="price-markets">
+        <div class="market-badge"><span>🇪🇬</span><span data-key="market_eg"></span></div>
+        <div class="market-badge"><span>🇸🇦</span><span data-key="market_sa"></span></div>
+      </div>
+      <div class="price-value-props" id="price-props"></div>
+      <div class="price-note" data-key="price_note"></div>
+      <a href="#contact" class="btn-primary price-cta" data-key="price_cta"></a>
+      <div class="price-subtext" data-key="price_subtext"></div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section class="urgency-sec" id="urgency">
+  <div class="container">
+    <div class="urgency-inner reveal">
+      <div class="urgency-text">
+        <div class="urgency-badge" data-key="urgency_badge"></div>
+        <h2 data-key="urgency_title"></h2>
+        <p data-key="urgency_sub"></p>
+      </div>
+      <div class="countdown-wrap">
+        <div class="countdown-label" data-key="countdown_label"></div>
+        <div class="countdown">
+          <div class="cd-unit"><div class="cd-num" id="cd-h">00</div><div class="cd-lbl" data-key="cd_hours"></div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-num" id="cd-m">00</div><div class="cd-lbl" data-key="cd_mins"></div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-num" id="cd-s">00</div><div class="cd-lbl" data-key="cd_secs"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-sec" id="contact">
+  <div class="container">
+    <div class="section-label reveal" data-key="contact_label"></div>
+    <h2 class="section-title reveal" data-key="contact_title"></h2>
+    <p class="section-sub reveal" data-key="contact_sub"></p>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.81 19.79 19.79 0 01.86 2.18 2 2 0 012.83 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="cinfo-lbl" data-key="cinfo1_lbl"></div><div class="cinfo-val">+20 102 610 870</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="cinfo-lbl" data-key="cinfo2_lbl"></div><div class="cinfo-val">rAhmed12007@gmail.com</div></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FF6A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="cinfo-lbl" data-key="cinfo3_lbl"></div><div class="cinfo-val" data-key="cinfo3_val"></div></div>
+        </div>
+        <div class="contact-guarantee" data-key="contact_guarantee"></div>
+      </div>
+      <form class="contact-form reveal" id="contact-form">
+        <div class="form-group">
+          <label data-key="form_name"></label>
+          <input type="text" id="f-name" data-key-placeholder="form_name_ph" required>
+        </div>
+        <div class="form-group">
+          <label data-key="form_phone"></label>
+          <input type="tel" id="f-phone" data-key-placeholder="form_phone_ph" required>
+        </div>
+        <div class="form-group">
+          <label data-key="form_msg"></label>
+          <textarea id="f-msg" rows="4" data-key-placeholder="form_msg_ph" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit" data-key="form_submit"></button>
+        <div class="form-success" id="form-success" data-key="form_success_msg"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo" id="footer-logo"></div>
+      <div class="footer-text" data-key="footer_text"></div>
+      <div class="footer-copy" data-key="footer_copy"></div>
+    </div>
+  </div>
+</footer>
+
+<script src="lang/ar.js"></script>
+<script src="lang/en.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
