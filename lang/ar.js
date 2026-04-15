@@ -110,5 +110,5 @@ const ar = {
   form_submit: "ابعت — وهرد عليك فوراً",
   form_success_msg: "✅ تم الإرسال! هرد عليك خلال ساعة على الأكتر",
   footer_text: "JAHEZLY — نظام إدارة المطاعم المتكامل لمصر والسعودية",
-  footer_copy: "© 2025 JAHEZLY. جميع الحقوق محفوظة"
+  footer_copy: "© 2026 JAHEZLY. جميع الحقوق محفوظة"
 };
