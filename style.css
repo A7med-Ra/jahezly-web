@@ -167,6 +167,14 @@ body.ltr {
   50% { box-shadow: 0 0 0 6px rgba(255,106,0,0); }
 }
 
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800; line-height: 1.2;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .hero-title .orange-word {
   background: linear-gradient(135deg, var(--orange), var(--orange-light));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
