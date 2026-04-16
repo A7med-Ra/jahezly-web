@@ -4,113 +4,148 @@ const en = {
   nav_proof: "Reviews",
   nav_pricing: "Pricing",
   nav_contact: "Contact",
-  nav_cta: "Start Now",
-  hero_badge: "Available for Egyptian & Saudi restaurants",
-  hero_title: "Your restaurant is losing money every day... and you don't even know it",
-  hero_sub: "JAHEZLY transforms your restaurant from chaos to a professional system — orders, reservations, and delivery in one place.",
-  hero_cta: "Start Now — Free",
-  hero_trust: "+50 restaurants trust JAHEZLY",
-  hero_urgency: "⚡ Limited Offer: First 3 restaurants today get 3 months FREE",
+  nav_cta: "Get Started",
+
+  hero_badge: "Built for restaurants in Egypt & Saudi Arabia",
+  hero_title: "Your restaurant is losing money every day... and you don’t even notice",
+  hero_sub: "JAHEZLY turns your restaurant from chaos into a smooth, professional system — orders, reservations, and delivery all in one place.",
+  hero_cta: "Start Free",
+  hero_trust: "Trusted by 50+ restaurants",
+  hero_urgency: "⚡ Limited offer: First 3 restaurants today get 3 months FREE",
+
   stat1: "Active Restaurants",
-  stat2: "Client Satisfaction",
-  stat3: "Tech Support",
+  stat2: "Customer Satisfaction",
+  stat3: "Technical Support",
+
   pain_label: "The Problem",
-  pain_title: "What's costing your restaurant?",
-  pain_sub: "Every day you're losing money without feeling it — the problem isn't the food... it's the system",
+  pain_title: "What’s really costing your restaurant money?",
+  pain_sub: "You’re losing money every day without realizing it — and it’s not the food… it’s the system",
+
   pain1_title: "Lost Orders",
-  pain1_body: "A customer ordered and it never got sent — or sent wrong — now they're leaving a 1-star review",
-  pain2_title: "Shift Chaos",
-  pain2_body: "Nobody knows who's working when — every day there's a scheduling problem",
-  pain3_title: "WhatsApp Isn't Enough",
-  pain3_body: "You're receiving orders from WhatsApp, phone, and app — you can't keep track of anything",
-  pain4_title: "Paying Too Much Commission",
-  pain4_body: "Delivery apps take 25-30% from every order — that's your restaurant's money",
+  pain1_body: "A customer places an order, but it gets missed — or done wrong — and now you get a bad review",
+
+  pain2_title: "Shift Confusion",
+  pain2_body: "No one knows who’s working when — schedules are messy every single day",
+
+  pain3_title: "WhatsApp Isn’t Enough",
+  pain3_body: "Orders from WhatsApp, calls, and apps — but no clear system to manage them",
+
+  pain4_title: "High Commissions",
+  pain4_body: "Delivery apps take a big cut from every order — that’s your profit disappearing",
+
   ba_label: "Before & After",
-  ba_title: "See the Difference Yourself",
+  ba_title: "See the difference",
+
   before_label: "Before JAHEZLY",
   after_label: "After JAHEZLY",
+
   before_items: [
-    "Orders lost daily",
-    "WhatsApp chaos is unbearable",
-    "No reports or numbers",
+    "Orders getting lost daily",
+    "Unmanageable WhatsApp chaos",
+    "No clear reports or numbers",
     "App commissions eating profits",
-    "Everything manual and error-prone",
-    "No professional reservation system"
+    "Manual work with constant mistakes",
+    "No proper reservation system"
   ],
+
   after_items: [
-    "Every order logged automatically",
+    "Every order tracked automatically",
     "One dashboard for everything",
-    "Daily reports & clear profits",
-    "Direct orders without commission",
-    "Full automation, zero errors",
+    "Clear daily reports & profits",
+    "Direct orders with zero commission",
+    "Full automation, fewer mistakes",
     "Professional table booking system"
   ],
+
   sol_label: "The Solution",
   sol_title: "JAHEZLY — The system that takes your restaurant to the next level",
-  sol_sub: "Not just software — a complete system designed specifically for Egyptian and Saudi restaurants",
+  sol_sub: "Not just software — a complete system built specifically for restaurants in Egypt & Saudi Arabia",
+
   feat1_title: "Order Management",
-  feat1_body: "Receive orders from multiple sources in one place — no chaos, no loss",
+  feat1_body: "Manage all your orders from every channel in one place — no chaos, no missed orders",
+
   feat2_title: "Table Reservations",
-  feat2_body: "Smart booking system connected to WhatsApp — customers book and you track in the dashboard",
-  feat3_title: "Real-time Reports",
-  feat3_body: "See your profits, sales, and top-ordered items — all with one tap",
+  feat2_body: "Smart booking system connected to WhatsApp — customers book, you track everything easily",
+
+  feat3_title: "Real-Time Reports",
+  feat3_body: "Track your sales, profits, and top items instantly — all in one click",
+
   feat4_title: "Customer Communication",
-  feat4_body: "Auto-reply to customers, order confirmation, and instant WhatsApp updates",
+  feat4_body: "Automatic replies, order confirmations, and instant updates via WhatsApp",
+
   feat5_title: "Time Management",
-  feat5_body: "Shift schedules, reservations, and table availability — all in one place",
-  feat6_title: "Full Control Panel",
-  feat6_body: "Professional dashboard that works on mobile and desktop — manage from anywhere",
-  proof_label: "Client Reviews",
-  proof_title: "What do they say about JAHEZLY?",
-  t1_text: "Since using JAHEZLY, our orders are organized and we haven't lost a single one. The dashboard is very easy to use and saves a lot of management time.",
+  feat5_body: "Manage shifts, reservations, and table availability — all in one place",
+
+  feat6_title: "Full Control Dashboard",
+  feat6_body: "Professional dashboard on mobile and desktop — manage your business from anywhere",
+
+  proof_label: "Customer Reviews",
+  proof_title: "What our customers say about JAHEZLY",
+
+  t1_text: "Since we started using JAHEZLY, everything is organized. No more lost orders, and the dashboard saves us a lot of time.",
   t1_name: "Ahmed Samir",
   t1_role: "Grill Restaurant Owner — Cairo",
-  t2_text: "We used to pay huge commissions to delivery apps. Now we receive direct orders and save thousands every month.",
+
+  t2_text: "We used to pay huge commissions to delivery apps. Now we get direct orders and save thousands every month.",
   t2_name: "Mohammed Al-Ghamdi",
   t2_role: "Restaurant Manager — Jeddah",
-  t3_text: "The booking system is amazing. Customers book on their own and I see everything on the dashboard. No issues since we started.",
+
+  t3_text: "The reservation system is excellent. Customers book بسهولة and I can track everything from one place.",
   t3_name: "Sara Adel",
   t3_role: "Café Owner — Riyadh",
+
   price_label: "Pricing",
   price_title: "How much does it cost?",
-  price_hint: "Less than you think...",
+  price_hint: "Less than you expect...",
+
   market_eg: "Egypt — in EGP",
   market_sa: "Saudi Arabia — in SAR",
+
   price_props: [
-    "Pricing tailored to your restaurant size",
-    "Hosting + technical support FREE",
-    "Starting from less than one app commission",
-    "No long contracts — easy to start",
+    "Flexible pricing based on your restaurant size",
+    "Free hosting and technical support",
+    "Starts at less than one app commission",
+    "No long-term contracts",
     "24/7 Arabic support"
   ],
-  price_note: "Prices in EGP and SAR depending on your country — varies based on restaurant size and needs",
-  price_cta: "Find Your Price",
-  price_subtext: "Starting from less than what you currently pay in app commissions",
+
+  price_note: "Prices are in EGP and SAR depending on your country — vary based on your restaurant size and needs",
+  price_cta: "Get Your Price",
+  price_subtext: "Start for less than what you currently pay in app commissions",
+
   urgency_badge: "⏳ Limited Offer",
-  urgency_title: "Offer expires in...",
-  urgency_sub: "First 3 restaurants to sign up today get 3 months FREE + full setup at no cost",
-  countdown_label: "Time remaining on offer",
+  urgency_title: "Offer ends in...",
+  urgency_sub: "First 3 restaurants today get 3 months FREE + full setup included",
+
+  countdown_label: "Time remaining",
   cd_hours: "Hours",
   cd_mins: "Minutes",
   cd_secs: "Seconds",
+
   contact_label: "Contact Us",
   contact_title: "Let me show you how JAHEZLY fits your restaurant",
-  contact_sub: "Send me a message now and I'll reply within an hour — we'll create a free personalized demo for your restaurant",
+  contact_sub: "Send a message now and I’ll reply within an hour — plus a free personalized demo for your restaurant",
+
   cinfo1_lbl: "WhatsApp / Call",
   cinfo2_lbl: "Email",
   cinfo3_lbl: "Working Hours",
   cinfo3_val: "9 AM — 12 Midnight",
-  contact_guarantee: "✅ Guaranteed reply within 1 hour — free trial, no credit card needed",
+
+  contact_guarantee: "✅ Reply within 1 hour — free trial, no credit card required",
+
   form_name: "Your Name",
-  form_name_ph: "Your name here",
+  form_name_ph: "Enter your name",
   form_phone: "WhatsApp / Phone Number",
   form_phone_ph: "05XXXXXXXX",
-  form_msg: "Tell me about your restaurant",
-  form_msg_ph: "Restaurant type, daily orders, current problems...",
-  form_submit: "Send — I'll reply immediately",
+
+  form_msg: "Tell us about your restaurant",
+  form_msg_ph: "Type of restaurant, daily orders, current challenges...",
+
+  form_submit: "Send Now — I’ll reply right away",
   form_services_lbl: "What do you need for your restaurant?",
-  form_wa_note: "Opens WhatsApp directly — I'll reply within an hour",
-  form_success_msg: "✅ Sent! I'll reply within an hour",
+  form_wa_note: "Opens WhatsApp directly — reply within 1 hour",
+  form_success_msg: "✅ Sent! I’ll reply within an hour",
+
   footer_text: "JAHEZLY — Complete Restaurant Management System for Egypt & Saudi Arabia",
-  footer_copy: "© 2025 JAHEZLY. All rights reserved"
+  footer_copy: "© 2026 JAHEZLY. All rights reserved"
 };
